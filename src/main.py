@@ -1,6 +1,7 @@
 #how to scrape using playwright to load page and send back the html then parse with selectolax/beautifulsoup, litle bit late for working just to know how to use and learn about it. the code read the existing csv, then we fill asin in csv and then show in terminal
 
 
+
 from dataclasses import dataclass
 from playwright.sync_api import sync_playwright
 from selectolax.parser import HTMLParser
@@ -33,8 +34,9 @@ def parse_html(html, asin):
     #print(asin)
 
 def read_csv():
-    csv_path = 'product.csv'
-    with open('product.csv', 'r') as f:
+    csv_path = 'D:\\latihan\\amazon_playwright_scraping\\product.csv'
+    with open(csv_path, 'r') as f:
+
         reader = csv.reader(f)
         return [item[0] for item in reader]
 
